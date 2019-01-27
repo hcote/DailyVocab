@@ -1,0 +1,3 @@
+This app will integrate Twilio and send you a text every morning at the time you specify with a new vocabulary word of the day. It makes a simple rest API call to the Oxford Dictionary developer portal to retrieve a word based on a random algorithm I have yet to figure out.
+
+I will use spring and turn this into a website that has more features and acts more like a dictionary but for now I'd like to work more on core java than the spring framework.
