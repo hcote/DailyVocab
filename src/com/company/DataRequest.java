@@ -1,6 +1,9 @@
 package com.company;
 
-import org.json.simple.*;
+import org.json.*;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -19,10 +22,15 @@ public class DataRequest {
                             "app_key", "d236967a63ee1cc355c92f37bf3cfcff")
                     .build();
             HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            JSONObject obj = new JSONObject(response.body().toString());
+
             /**
              * JSONObject obj = new JSONObject(response.body());
              * This line of code doesn't work because JSONObject needs
              * a Map and response.body() is an Object
+             *
+             * ObjectMapper turns JSONObject to Map which needs to be imported through an external lib
              */
 
             System.out.println();
