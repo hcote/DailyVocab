@@ -1,8 +1,8 @@
 package com.company;
 
-import org.json.*;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+//import org.json.*;
+//import org.json.simple.JSONObject;
+//import org.json.simple.parser.JSONParser;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -11,7 +11,7 @@ import java.net.http.HttpResponse;
 
 public class DataRequest {
 
-    public static void getVocabData() {
+    public static void getWordObject() {
 
         try {
             HttpClient client = HttpClient.newHttpClient();
@@ -22,21 +22,25 @@ public class DataRequest {
                             "app_key", "d236967a63ee1cc355c92f37bf3cfcff")
                     .build();
             HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            Object responseBody = response.body();
 
-            JSONObject obj = new JSONObject(response.body().toString());
+            System.out.println(responseBody);
 
-            /**
-             * JSONObject obj = new JSONObject(response.body());
-             * This line of code doesn't work because JSONObject needs
-             * a Map and response.body() is an Object
-             *
-             * ObjectMapper turns JSONObject to Map which needs to be imported through an external lib
-             */
-
-            System.out.println();
         } catch (Throwable e) {
             e.printStackTrace();
         }
+    }
+
+    public static void extractSpecificWordData(Object wordObject) {
+
+        /**
+         * JSONObject obj = new JSONObject(wordObject);
+         * This line of code doesn't work because JSONObject expects
+         * a Map and wordObject is an Object
+         *
+         * ObjectMapper turns JSONObject to Map which needs to be imported through an external lib
+         */
+
     }
 
 }
