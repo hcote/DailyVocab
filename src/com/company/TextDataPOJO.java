@@ -45,5 +45,5 @@ public class TextDataPOJO {
     public void setSentence(String sentence) {
         this.sentence = sentence;
     }
-    
+
 }
