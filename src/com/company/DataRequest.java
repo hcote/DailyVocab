@@ -1,17 +1,16 @@
 package com.company;
 
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class DataRequest {
 
-    public static Object getWordObject() {
+    public static String getWord() {
 
         try {
             HttpClient client = HttpClient.newHttpClient();
@@ -22,24 +21,28 @@ public class DataRequest {
                             "app_key", "d236967a63ee1cc355c92f37bf3cfcff")
                     .build();
             HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            return response.body();
+
+            System.out.println(response.body().toString());
+
+            return response.body().toString();
 
         } catch (Throwable e) {
             e.printStackTrace();
         }
-        return returnObjectIfNoAttemptToGetWord;
+
+        return "Error attempting API Request. Try again.";
     }
 
-    public static Object parseJsonForWord(Object wordObject) {
+    public static Object parseJsonForWord(String jsonString) {
 
-        Map<String, Object> word = new HashMap<String, Object>();
-        word.put("Response:", wordObject);
-        JSONObject wordMap = new JSONObject(word);
-        System.out.println(wordMap);
+        try {
+            JSONObject json = new JSONObject(jsonString);
+            return json;
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
 
-        return wordMap;
+        return false;
     }
-
-    private static Object returnObjectIfNoAttemptToGetWord = "You did not get the word";
-
+    
 }

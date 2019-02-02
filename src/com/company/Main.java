@@ -1,6 +1,6 @@
 package com.company;
 
-import static com.company.DataRequest.getWordObject;
+import static com.company.DataRequest.getWord;
 import static com.company.DataRequest.parseJsonForWord;
 
 public class Main {
@@ -15,7 +15,9 @@ public class Main {
          *
          */
 
-        Object word = getWordObject();
+//        System.out.println(getWordObject());
+
+        String word = getWord();
         parseJsonForWord(word);
 
     }
