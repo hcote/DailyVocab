@@ -1,5 +1,6 @@
 package com.company;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.net.URI;
@@ -22,7 +23,7 @@ public class DataRequest {
                     .build();
             HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            System.out.println(response.body().toString());
+             System.out.println(response.body().toString());
 
             return response.body().toString();
 
@@ -37,12 +38,16 @@ public class DataRequest {
 
         try {
             JSONObject json = new JSONObject(jsonString);
-            return json;
+            JSONArray results = json.getJSONArray("results");
+            JSONObject first = results.getJSONObject(0);
+            String word = first.getString("id"); // returns word i.e. nepotism
+            System.out.println(word);
+            return word;
         } catch (Throwable e) {
             e.printStackTrace();
         }
 
         return false;
     }
-    
+
 }
