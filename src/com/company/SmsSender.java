@@ -1,12 +1,11 @@
 package com.company;
 
-// Install the Java helper library from twilio.com/docs/libraries/java
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 
 public class SmsSender {
-    // Find your Account Sid and Auth Token at twilio.com/console
+
     public static final String ACCOUNT_SID =
             "AC8a1932cdb890753332c3d14dbb8c7ec3";
     public static final String AUTH_TOKEN =
@@ -23,4 +22,5 @@ public class SmsSender {
 
         System.out.println(message.getSid());
     }
+
 }

@@ -17,7 +17,7 @@ public class DataRequest {
      * it can easily be passed into the next function parseJsonForWord to extract
      * more specific data we're after
      */
-    public static String getWordData() {
+    public static String getWordObject() {
 
         try {
 
