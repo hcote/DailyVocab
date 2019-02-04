@@ -33,7 +33,7 @@ public class SmsSender {
         for(String number : phoneNumbers) {
             Message message = Message
                     .creator(new PhoneNumber(number), // to
-                            new PhoneNumber("+14152002382"), // from
+                            new PhoneNumber("+"), // from
                             textBody)
                     .create();
         }
