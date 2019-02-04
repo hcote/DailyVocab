@@ -3,6 +3,7 @@ package com.company;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
+import com.company.SensitiveInfo.*;
 
 import java.util.ArrayList;
 
@@ -10,17 +11,22 @@ public class SmsSender {
 
     static ArrayList<String> phoneNumbers = new ArrayList<>();
 
+    /**
+     * this allows us to add the numbers to the array list without
+     * creating and calling a method to do so for us
+     */
+
     static {
-        phoneNumbers.add("+1xxxxxxxxxx");
-        phoneNumbers.add("+1xxxxxxxxxx");
+        phoneNumbers.add(jsNum);
+        phoneNumbers.add(myNum);
     }
 
 
 
     public static final String ACCOUNT_SID =
-            "AC8a1932cdb890753332c3d14dbb8c7ec3";
+            accoundSid;
     public static final String AUTH_TOKEN =
-            "d2fbf1ab99f9b3fb96c0e8774ea3e142";
+            authToken;
 
     public static void sendText(String textBody) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
