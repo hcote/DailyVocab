@@ -1,7 +1,8 @@
 package com.company;
 
-import static com.company.DataRequest.getWordObject;
-import static com.company.DataRequest.parseJsonForWord;
+import java.util.Timer;
+
+import static com.company.DataRequest.*;
 import static com.company.SmsSender.sendText;
 
 public class Main {
@@ -10,7 +11,12 @@ public class Main {
 
         String json = getWordObject(); // makes API call returns json.toString() response
         String word = parseJsonForWord(json); // parses response & returns single word
-        // sendText(word); // sends text with the word
+        sendText(word); // sends text with the word
+
+//        Timer timer = new Timer();
+//        Test test = new Test();
+//        timer.scheduleAtFixedRate(test, 0, 10000);
 
     }
+
 }

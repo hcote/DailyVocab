@@ -17,6 +17,7 @@ public class DataRequest {
      * it can easily be passed into the next function parseJsonForWord to extract
      * more specific data we're after
      */
+
     public static String getWordObject() {
 
         try {
@@ -41,13 +42,12 @@ public class DataRequest {
     }
 
     /**
-     * This fn takes in @param jsonString, the Http response object converted to
+     * This method takes in @param jsonString, the Http response object converted to
      * a string from the getWord() method
      *
      * Using the org.json library I have access to JSONObject, JSONArray and other helpful
      * methods that allow me to parse the @param jsonString for what values I want
      *
-     * @return
      */
 
     public static String parseJsonForWord(String jsonString) {
@@ -56,6 +56,8 @@ public class DataRequest {
 
             JSONObject json = new JSONObject(jsonString);
             JSONArray results = json.getJSONArray("results");
+//            JSONObject lexicalEntries = results.getJSONObject(0);
+//            JSONArray derivatives = lexicalEntries.getJSONArray("derivatives");
             JSONObject first = results.getJSONObject(0);
             String word = first.getString("id"); // returns word i.e. nepotism
             System.out.println(word);
