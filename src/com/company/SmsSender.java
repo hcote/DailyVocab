@@ -17,23 +17,23 @@ public class SmsSender {
      */
 
     static {
-        phoneNumbers.add(jsNum);
-        phoneNumbers.add(myNum);
+//        phoneNumbers.add(jsNum);
+        phoneNumbers.add("+14017141831");
     }
 
 
 
     public static final String ACCOUNT_SID =
-            accoundSid;
+            "AC8a1932cdb890753332c3d14dbb8c7ec3";
     public static final String AUTH_TOKEN =
-            authToken;
+            "854463445fd8b2e42d4b91e35fb1394e";
 
     public static void sendText(String textBody) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
         for(String number : phoneNumbers) {
             Message message = Message
                     .creator(new PhoneNumber(number), // to
-                            new PhoneNumber("+"), // from
+                            new PhoneNumber("+14152002382"), // from
                             textBody)
                     .create();
         }

@@ -24,10 +24,8 @@ public class DataRequest {
 
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://od-api.oxforddictionaries.com/api/v1/entries/en/nepotism"))
-                    .headers("Content-Type", "application/json",
-                            "app_id", "67c20362",
-                            "app_key", "d236967a63ee1cc355c92f37bf3cfcff")
+                    .uri(URI.create("https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=xxx"))
+                    .header("Content-Type", "application/json")
                     .build();
             HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println(response.body().toString());
@@ -55,14 +53,14 @@ public class DataRequest {
         try {
 
             JSONObject json = new JSONObject(jsonString);
-            JSONArray results = json.getJSONArray("results");
+            JSONObject results = json.getJSONObject("id");
 //            JSONObject lexicalEntries = results.getJSONObject(0);
 //            JSONArray derivatives = lexicalEntries.getJSONArray("derivatives");
-            JSONObject first = results.getJSONObject(0);
-            String word = first.getString("id"); // returns word i.e. nepotism
-            System.out.println(word);
+//            JSONObject first = results.getJSONObject(0);
+//            String word = first.getString("id"); // returns word i.e. nepotism
+            System.out.println(results);
 
-            return word;
+            return null;
 
         } catch (Throwable e) {
             e.printStackTrace();

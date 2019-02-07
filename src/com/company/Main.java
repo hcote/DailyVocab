@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
 
         String json = getWordObject(); // makes API call returns json.toString() response
-        String word = parseJsonForWord(json); // parses response & returns single word
-        sendText(word); // sends text with the word
+        Object word = parseJsonForWord(json); // parses response & returns single word
+//        sendText(word); // sends text with the word
 
 //        Timer timer = new Timer();
 //        Test test = new Test();
