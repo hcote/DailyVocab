@@ -1,27 +1,29 @@
 package com.company;
 
-import java.util.Timer;
-
-import static com.company.DataRequest.*;
-import static com.company.SmsSender.sendText;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        // makes API call returns json.toString() response
-        String json = getWordObject();
+        /**
+         * this class sets up a periodic task to be run at 11am local time each day
+         * for 7 days
+         *
+         * it runs class ChronJob(); which holds the main functionality of the app,
+         * mainly the api request for the data, the parsing of the json object,
+         * and the sending of the text to the users
+         */
 
-        //parses response & returns the word, definition and sentence
-        // which will compose the text message the end user receives
-        String text = parseJsonForWord(json);
+        Calendar today = Calendar.getInstance();
+        today.set(Calendar.HOUR_OF_DAY, 9);
+        today.set(Calendar.MINUTE, 32);
+        today.set(Calendar.SECOND, 0);
 
-        // sends text with the word, definition and sentence
-        sendText(text);
-
-//        Timer timer = new Timer();
-//        Test test = new Test();
-//        timer.scheduleAtFixedRate(test, 0, 15000);
+        java.util.Timer timer = new java.util.Timer();
+        ChronJob mainFunctionality = new ChronJob();
+        timer.schedule(mainFunctionality, today.getTime(), TimeUnit.MILLISECONDS.convert(7, TimeUnit.DAYS));
 
     }
 

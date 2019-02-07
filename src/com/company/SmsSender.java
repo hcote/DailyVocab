@@ -13,20 +13,18 @@ public class SmsSender {
     static ArrayList<String> phoneNumbers = new ArrayList<>();
 
     /**
-     * this allows us to add the numbers to the array list without
-     * creating and calling a method to do so for us
+     * this static{} method allows us to add the numbers to the array
+     * list without creating and calling a standard method to do so for us
      */
 
     static {
-        // phoneNumbers.add(jsNum);
+        phoneNumbers.add(jsNum);
         phoneNumbers.add(myNum);
     }
 
 
-    public static final String ACCOUNT_SID =
-            accountSid;
-    public static final String AUTH_TOKEN =
-            authToken;
+    public static final String ACCOUNT_SID = accountSid;
+    public static final String AUTH_TOKEN = authToken;
 
     public static void sendText(String textBody) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);

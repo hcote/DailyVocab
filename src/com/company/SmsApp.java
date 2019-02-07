@@ -11,7 +11,7 @@ public class SmsApp {
 
     public static void main(String[] args) {
 
-        // the below line of code is for if this is turned into a web app
+        // line of code below is for if you turn this into a web app
         // get("/", (req, res) -> "Hello Web");
 
         /**
