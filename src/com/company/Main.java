@@ -9,14 +9,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String json = getWordObject(); // makes API call returns json.toString() response
-        String word = parseJsonForWord(json); // parses response & returns single word
-        System.out.println(word);
-        sendText(word); // sends text with the word, definition and sentence
+        // makes API call returns json.toString() response
+        String json = getWordObject();
 
-        Timer timer = new Timer();
-        Test test = new Test();
-        timer.scheduleAtFixedRate(test, 0, 15000);
+        //parses response & returns the word, definition and sentence
+        // which will compose the text message the end user receives
+        String text = parseJsonForWord(json);
+
+        // sends text with the word, definition and sentence
+        sendText(text);
+
+//        Timer timer = new Timer();
+//        Test test = new Test();
+//        timer.scheduleAtFixedRate(test, 0, 15000);
 
     }
 
