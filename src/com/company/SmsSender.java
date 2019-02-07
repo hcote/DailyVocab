@@ -24,9 +24,9 @@ public class SmsSender {
 
 
     public static final String ACCOUNT_SID =
-            "AC8a1932cdb890753332c3d14dbb8c7ec3";
+            "xxx";
     public static final String AUTH_TOKEN =
-            "854463445fd8b2e42d4b91e35fb1394e";
+            "xxx";
 
     public static void sendText(String textBody) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);

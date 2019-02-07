@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="287b3674-3c84-48d4-a26e-c842bde00ca3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dailyvocab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dailyvocab.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyvocab/com/company/DataRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyvocab/com/company/DataRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyvocab/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyvocab/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyvocab/com/company/SmsSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyvocab/com/company/SmsSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/DataRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DataRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SensitiveInfo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SmsSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SmsSender.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,10 +25,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/DataRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="390">
               <caret line="26" column="99" selection-start-line="26" selection-start-column="99" selection-end-line="26" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -68,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/SmsSender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="250">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,10 +112,10 @@
         <option value="$PROJECT_DIR$/src/com/company/Test.java" />
         <option value="$PROJECT_DIR$/src/com/company/SensitiveInfo.java" />
         <option value="$PROJECT_DIR$/src/com/company/SmsApp.java" />
-        <option value="$PROJECT_DIR$/src/com/company/SmsSender.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/company/DataRequest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/SmsSender.java" />
       </list>
     </option>
   </component>
@@ -168,7 +159,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549501038127" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549501134856" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -365,16 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/SmsSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -401,8 +382,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DataRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="390">
           <caret line="26" column="99" selection-start-line="26" selection-start-column="99" selection-end-line="26" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/SmsSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
