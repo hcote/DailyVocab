@@ -17,8 +17,8 @@ public class Main {
          */
 
         Calendar today = Calendar.getInstance();
-        today.set(Calendar.HOUR_OF_DAY, 9);
-        today.set(Calendar.MINUTE, 32);
+        today.set(Calendar.HOUR_OF_DAY, 11);
+        today.set(Calendar.MINUTE, 0);
         today.set(Calendar.SECOND, 0);
 
         java.util.Timer timer = new java.util.Timer();
