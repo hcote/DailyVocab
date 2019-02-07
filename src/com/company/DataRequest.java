@@ -30,7 +30,7 @@ public class DataRequest {
                     .header("Content-Type", "application/json")
                     .build();
             HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body().toString());
+
             return response.body().toString();
 
         } catch (Throwable e) {
@@ -62,12 +62,7 @@ public class DataRequest {
             JSONObject definitionsObj = definitions.getJSONObject(0);
             String definition = definitionsObj.getString("text");
 
-            System.out.println("Word: " + word);
-            System.out.println("Definition: " + definition);
-            System.out.println("Sentence: " + sentence);
-
-
-            return null;
+            return("Word: " + word + "\n\n" + "Definition: " + definition + "\n\n" + "Sentence: " + sentence);
 
         } catch (Throwable e) {
             e.printStackTrace();

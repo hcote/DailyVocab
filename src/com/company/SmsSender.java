@@ -18,10 +18,9 @@ public class SmsSender {
      */
 
     static {
-//        phoneNumbers.add(jsNum);
+        // phoneNumbers.add(jsNum);
         phoneNumbers.add(myNum);
     }
-
 
 
     public static final String ACCOUNT_SID =
