@@ -8,6 +8,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+import static com.company.hiddeninfo.SensitiveInfo.APIkey;
+
 
 public class DataRequest {
 
@@ -24,12 +26,11 @@ public class DataRequest {
 
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=xxx"))
+                    .uri(URI.create("https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=" + APIkey))
                     .header("Content-Type", "application/json")
                     .build();
             HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println(response.body().toString());
-
             return response.body().toString();
 
         } catch (Throwable e) {
@@ -53,12 +54,18 @@ public class DataRequest {
         try {
 
             JSONObject json = new JSONObject(jsonString);
-            JSONObject results = json.getJSONObject("id");
-//            JSONObject lexicalEntries = results.getJSONObject(0);
-//            JSONArray derivatives = lexicalEntries.getJSONArray("derivatives");
-//            JSONObject first = results.getJSONObject(0);
-//            String word = first.getString("id"); // returns word i.e. nepotism
-            System.out.println(results);
+            String word = json.getString("word");
+            JSONArray examples = json.getJSONArray("examples");
+            JSONObject sentenceObj = examples.getJSONObject(0);
+            String sentence = sentenceObj.getString("text");
+            JSONArray definitions = json.getJSONArray("definitions");
+            JSONObject definitionsObj = definitions.getJSONObject(0);
+            String definition = definitionsObj.getString("text");
+
+            System.out.println("Word: " + word);
+            System.out.println("Definition: " + definition);
+            System.out.println("Sentence: " + sentence);
+
 
             return null;
 
@@ -66,7 +73,7 @@ public class DataRequest {
             e.printStackTrace();
         }
 
-        return null;
+        return "Failed to attempt to parse json object";
     }
 
 }

@@ -6,6 +6,8 @@ import com.twilio.type.PhoneNumber;
 
 import java.util.ArrayList;
 
+import static com.company.hiddeninfo.SensitiveInfo.*;
+
 public class SmsSender {
 
     static ArrayList<String> phoneNumbers = new ArrayList<>();
@@ -17,22 +19,22 @@ public class SmsSender {
 
     static {
 //        phoneNumbers.add(jsNum);
-        phoneNumbers.add("+14017141831");
+        phoneNumbers.add(myNum);
     }
 
 
 
     public static final String ACCOUNT_SID =
-            "xxx";
+            accountSid;
     public static final String AUTH_TOKEN =
-            "xxx";
+            authToken;
 
     public static void sendText(String textBody) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
         for(String number : phoneNumbers) {
             Message message = Message
                     .creator(new PhoneNumber(number), // to
-                            new PhoneNumber("+14152002382"), // from
+                            new PhoneNumber(twilioNum), // from
                             textBody)
                     .create();
         }
