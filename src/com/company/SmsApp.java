@@ -9,10 +9,10 @@ import static spark.Spark.*;
 
 public class SmsApp {
 
-    public static void main(String[] args) {
+    public static void SmsAppMethod() {
 
         // line of code below is for if you turn this into a web app
-        // get("/", (req, res) -> "Hello Web");
+         get("/", (req, res) -> "Hello Web");
 
         /**
          * when the twilio phone number receives an incoming text from any number...
@@ -22,26 +22,27 @@ public class SmsApp {
 
             res.type("application/xml");
 
-            System.out.println(req.queryParams("Body"));
-            System.out.println(req.queryParams("From"));
+            System.out.println(req.queryParams("From") + " said " + req.queryParams("Body"));
 
             /**
-             * if the app receives a text "enroll", it checks to see if the number  is already
+             * if the app receives a text "start", it checks to see if the number  is already
              * part of the phoneNumbers ArrayList. If so, it returns false to avoid issues of having
              * duplicate numbers in the array and therefore having double texts & trouble with the
              * 'stop' texts
              *
-             * If the number is not already in the list, it is added to it. Then a message is built and
+             * if the number is not already in the list, it is added to it. Then a message is built and
              * sent back to the user confirming their enrollment.
              */
 
-            if (req.queryParams("Body").toLowerCase().equals("enroll")) {
+            if (req.queryParams("Body").toLowerCase().equals("start")) {
 
                 if (phoneNumbers.contains(req.queryParams("From"))) {
                     return false;
                 }
 
                 phoneNumbers.add(req.queryParams("From"));
+
+                System.out.println("New member: " + req.queryParams("From"));
 
                 Body body = new Body
                         .Builder("Thank you for enrolling in Word of the Day! Respond 'stop' anytime to stop receiving texts.")
@@ -90,7 +91,7 @@ public class SmsApp {
                 return twiml.toXml();
             }
 
-            return false;
+            return req.queryParams("Body");
 
         });
     }

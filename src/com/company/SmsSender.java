@@ -18,8 +18,18 @@ public class SmsSender {
      */
 
     static {
+        phoneNumbers.add(momsNum);
+        phoneNumbers.add(dadsNum);
+        phoneNumbers.add(tylersNum);
+        phoneNumbers.add(stephsNum);
+        phoneNumbers.add(parkersNum);
         phoneNumbers.add(jsNum);
+        phoneNumbers.add(hollynsNum);
         phoneNumbers.add(myNum);
+
+        phoneNumbers.add(kyle);
+        phoneNumbers.add(boylivo);
+        phoneNumbers.add(mk);
     }
 
 
@@ -36,7 +46,7 @@ public class SmsSender {
                     .create();
         }
 
-        System.out.println("Messages sent!");
+        System.out.println("Message sent to " + phoneNumbers);
     }
 
 }
