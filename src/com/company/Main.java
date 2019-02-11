@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
 
         /**
-         * invoking the method that runs the localhost server and sets up the GET
-         * and POST logic
+         * invoking the method that runs the localhost server and sets up the
+         * GET and POST logic
          *
          * this includes responding to incoming text messages
          * i.e. adding/removing users based on "start", "stop" texts
@@ -29,8 +29,8 @@ public class Main {
          */
 
         Calendar today = Calendar.getInstance();
-        today.set(Calendar.HOUR_OF_DAY, 17);
-        today.set(Calendar.MINUTE, 12);
+        today.set(Calendar.HOUR_OF_DAY, 18);
+        today.set(Calendar.MINUTE, 0);
         today.set(Calendar.SECOND, 0);
 
         java.util.Timer timer = new java.util.Timer();
