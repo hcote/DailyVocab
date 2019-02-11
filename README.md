@@ -1,5 +1,6 @@
 ## Overview
 This app integrates Twilio text messaging services and Wordnik API to send you a text every morning with a new vocabulary "word of the day".
+Text the word "start" to (415) 200-4846 to begin receiving daily vocab words in sms messages. They come in at 10am EST, 7am PST each morning.
 
 ## Technologies Used
 1. Java
