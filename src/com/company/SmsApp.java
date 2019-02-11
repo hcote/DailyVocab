@@ -12,7 +12,7 @@ public class SmsApp {
     public static void SmsAppMethod() {
 
         // line of code below is for if you turn this into a web app
-         get("/", (req, res) -> "Hello Web");
+         get("/", (req, res) -> "Word of the day running!");
 
         /**
          * when the twilio phone number receives an incoming text from any number...

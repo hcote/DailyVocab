@@ -6,7 +6,7 @@ import com.twilio.type.PhoneNumber;
 
 import java.util.ArrayList;
 
-import static com.company.hiddeninfo.SensitiveInfo.*;
+import static com.company.hiddeninfo.Private.*;
 
 public class SmsSender {
 

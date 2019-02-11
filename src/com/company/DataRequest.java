@@ -8,7 +8,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-import static com.company.hiddeninfo.SensitiveInfo.APIkey;
+import static com.company.hiddeninfo.Private.APIkey;
 
 
 public class DataRequest {

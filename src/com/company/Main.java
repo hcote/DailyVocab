@@ -20,8 +20,8 @@ public class Main {
         SmsAppMethod();
 
         /**
-         * this class sets up a periodic task to be run at 11am local time each day
-         * for 7 days
+         * this class sets up a periodic task to be run at 7am local time each day
+         * for 365 days
          *
          * it runs class ChronJob(); which holds the main functionality of the app,
          * mainly the api request for the data, the parsing of the json object,
@@ -29,7 +29,7 @@ public class Main {
          */
 
         Calendar today = Calendar.getInstance();
-        today.set(Calendar.HOUR_OF_DAY, 18);
+        today.set(Calendar.HOUR_OF_DAY, 7);
         today.set(Calendar.MINUTE, 0);
         today.set(Calendar.SECOND, 0);
 
