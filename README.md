@@ -10,7 +10,7 @@ Text the word "start" to (415) 200-4846 to begin receiving daily vocab words in 
 ## How It Works
 
 ### Sending texts
-In Main.class there is a scheduled method to run at 11am each morning, which calls ChronJob.class. ChronJob's three methods are the core of the application.
+In Main.class there is a scheduled method to run at 7am each morning, which calls ChronJob.class. ChronJob's three methods are the core of the application.
 The first is the API call to Wordnik which is a simple HTTP request for data and returns a json object.
 The second method parses the json data and extracts the word, definition and example sentence.
 The third method is what sends the text message.
