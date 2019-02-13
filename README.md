@@ -9,10 +9,11 @@ I want this app to be used by many people and a hands-off, long-running project.
 Given the codebase for sending daily texts was already there, I refactored the API and now created another app that sends a daily inspirational quote. Just text (415) 200-2382 to start. This is also running on Heroku and you can go to https://quoteoftheday2.herokuapp.com/ to see that it is running.
 
 ## Technologies Used
-1. Java
-2. Twilio
-3. Ngrok
-4. Heroku
+1. Java 11
+2. Maven
+3. Twilio
+4. Ngrok
+5. Heroku
 
 ## How It Works
 
