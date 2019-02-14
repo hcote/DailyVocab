@@ -3,7 +3,7 @@ This app integrates Twilio text messaging services and Wordnik API to send you a
 Text the word "start" to (415) 200-4846 to begin receiving daily vocab words in sms messages. They come in at 10am EST, 7am PST each morning.
 
 ## Update
-I want this app to be used by many people and a hands-off, long-running project. The way it was originally set up with ngrok and a localhost server was not setting it up for that. I uploaded the code to Heroku so now that is my server sending daily texts. To see that it is up and running just go to https://wordoftheday1.herokuapp.com/
+I want this app to be used by many people and a hands-off, long-running project. The way it was originally set up with ngrok and a localhost server was not setting it up for that. I turned it into a maven project and uploaded the code to Heroku so now that is my server sending daily texts. To see that it is up and running just go to https://wordoftheday1.herokuapp.com/
 
 ## Update 2
 Given the codebase for sending daily texts was already there, I refactored the API and now created another app that sends a daily inspirational quote. Just text (415) 200-2382 to start. This is also running on Heroku and you can go to https://quoteoftheday2.herokuapp.com/ to see that it is running.
