@@ -71,7 +71,7 @@ public class DataRequest {
             e.printStackTrace();
         }
 
-        return "Failed to attempt to parse json object";
+        return null;
     }
 
 }

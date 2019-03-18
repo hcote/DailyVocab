@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Calendar;
 import java.util.TimerTask;
 
 import static com.company.DataRequest.getWordObject;
@@ -20,6 +21,15 @@ public class ChronJob extends TimerTask {
 
         // sends text with the word, definition and sentence
         sendText(text);
+
+        Calendar today = Calendar.getInstance();
+
+
+        System.out.println(today.getTime());
+
+        /**
+         * need to ensure if the API request fails no text is sent
+         */
 
     }
 
