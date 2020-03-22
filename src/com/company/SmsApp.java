@@ -65,7 +65,7 @@ public class SmsApp {
              * it sends them a confirmation text back that they have been removed from the group.
              */
 
-            if (req.queryParams("Body").toLowerCase().equals("no")) {
+            if (req.queryParams("Body").toLowerCase().equals("exit")) {
 
                 if (phoneNumbers.contains(req.queryParams("From"))) {
                     return true;
